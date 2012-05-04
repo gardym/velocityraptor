@@ -1,0 +1,8 @@
+{
+  "name": "velocityraptor",
+  "version": "0.0.1",
+  "description": "velocityraptor will eat your burn up chart and kick you in the face",
+  "dependencies": {
+    "express": ">=2.5.9"
+  }
+}

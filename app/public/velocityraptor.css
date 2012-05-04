@@ -1,0 +1,11 @@
+
+.quote p {
+	font-family: "Tahoma", sans-serif;
+	color: #000;
+	font-size: 2em;
+	text-align: center;
+}
+
+#raptor {
+	display: none;
+}

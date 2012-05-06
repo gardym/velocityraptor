@@ -72,5 +72,23 @@ describe("quotes.js", function() {
 
   });
 
+  describe("when the second quote is clicked", function() {
+
+    beforeEach(function() {
+      $find(".quote:first").trigger("click");
+      $find("#raptor").trigger("click");
+      $find(".quote:eq(1)").trigger("click");
+    });
+
+    it("should show the raptor again. Ah hah!", function() {
+      $find("#raptor").closest(".container").is(":visible").should.equal(true);
+    });
+
+    it("should hide the second quote", function() {
+      $find(".quote:eq(1)").closest(".container").is(":visible").should.equal(false);
+    });
+
+  });
+
 });
 

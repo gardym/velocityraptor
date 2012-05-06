@@ -55,5 +55,22 @@ describe("quotes.js", function() {
       $find("#raptor").closest(".container").is(":visible").should.equal(true); 
     });    
   });
+
+  describe("when the raptor is clicked", function() {
+    beforeEach(function() {
+      $find(".quote:first").trigger("click");
+      $find("#raptor").trigger("click");
+    });
+
+    it("should show the next quote", function() {
+      $find(".quote:eq(1)").closest(".container").is(":visible").should.equal(true);
+    });
+
+    it("should hide the raptor", function() {
+      $find("#raptor").closest(".container").is(":visible").should.equal(false);
+    });
+
+  });
+
 });
 

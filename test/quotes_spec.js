@@ -14,7 +14,7 @@ requirejs.config({
 
 var $find = function(sel) { return $(document).find(sel); }; 
 
-var fixture = "<div class='container'><div class='quote'></div></div><div class='container'><div class='quote'></div></div>"; 
+var fixture = "<div class='container' style='display: none'><div><img src='raptor.jpg' id='raptor' /></div></div><div class='container'><div class='quote'></div></div><div class='container'><div class='quote'></div></div>"; 
 
 var quotes = requirejs("quotes");
 
@@ -35,16 +35,25 @@ describe("quotes.js", function() {
       $find(".quote:first")[0]._listeners.click.should.not.equal(undefined);
     });
 
+    it("should not be showing the raptor", function() {
+      $find("#raptor").closest(".container").is(":visible").should.equal(false);
+    });
+
   });
 
   describe("when a quote is a clicked", function() {
 
-    it("should hide itself", function() {
+    beforeEach(function() {
       $find(".quote:first").trigger("click");
+    });
+
+    it("should hide itself", function() {
       $find(".quote:first").closest(".container").is(":visible").should.equal(false);
     });
 
-    it("should show the raptor");    
+    it("should show the raptor", function() {
+      $find("#raptor").closest(".container").is(":visible").should.equal(true); 
+    });    
   });
 });
 

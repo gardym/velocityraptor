@@ -12,3 +12,7 @@
     cd velocityraptor/
     ./node_modules/mocha/bin/mocha
 
+    or more easily:
+    cd velocityraptor/
+    ./mocha.sh
+

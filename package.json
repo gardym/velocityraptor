@@ -3,6 +3,11 @@
   "version": "0.0.1",
   "description": "velocityraptor will eat your burn up chart and kick you in the face",
   "dependencies": {
-    "express": ">=2.5.9"
+    "express": ">=2.5.9",
+    "mocha": ">=1.0.0",
+    "chai": ">=0.5.0",
+    "requirejs": ">=1.0.0",
+    "jquery": ">=1.7.0",
+    "jsdom": ">=0.2.0"
   }
 }

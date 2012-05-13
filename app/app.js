@@ -23,6 +23,16 @@ app.get('/about', function(request, response) {
   response.render('about.haml');
 });
 
+app.get('/:permalink', function(request, response) {
+  quote = quotes.filter(function(e, i, a) { return e.permalink == request.params.permalink });
+
+  if (quote.length == 0) {
+    response.redirect('/');
+  }
+
+  response.render('quote.haml', {quote: quote[0]});
+});
+
 var port = process.env.PORT || 3000;
 app.listen(port, function() {
     console.log("Listening on " + port);

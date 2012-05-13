@@ -6,7 +6,7 @@ var Haml = require('haml');
 app.use('/public', express.static(__dirname + '/public'));
 
 app.get('/', function(request, response) {
-  response.send(fs.readFileSync('app/index.html', 'utf-8'));
+  response.send(Haml.render(fs.readFileSync('app/index.haml', 'utf-8')));
 });
 
 app.get('/about', function(request, response) {

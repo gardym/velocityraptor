@@ -1,0 +1,34 @@
+!!! html5
+%html
+  %head
+    %script{data-main: "public/main", src: "public/require-jquery.js"}
+    %link{type: "text/css", rel: "stylesheet", href: "public/velocityraptor.css"}
+  %body
+    .container{style: "display: none"}
+      %div
+        %img#raptor{src: "public/velocityraptor.jpg"}
+	  .container
+		  .quote
+			  Do you pressure testers on when testing will be done?
+	  .container
+		  .quote
+        Want to count the points after 'dev-complete' rather than done?
+    .container
+		  .quote
+        Do you pull out integration testing out into zero point cards?
+    .container
+		  .quote
+        Do you refuse to prioritise tech debt or bugs?
+    .container
+		  .quote
+        Do you refuse to do the right thing because it might initially impact your velocity?
+    #footer
+      %img{src: "public/title.png"}
+      #ul
+        %li about
+        %li create
+        %li
+          %a{href: "https://twitter.com/#!/velocityraptor_"} twitter
+        %li
+          %a{href: "https://github.com/gardym/velocityraptor"} github
+        %li email

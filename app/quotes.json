@@ -1,9 +1,19 @@
 {
   "quotes": [
-    {"quote": "Do you pressure testers on when testing will be done?", "permalink": "is_testing_done"},
-    {"quote": "Want to count the points after 'dev-complete' rather than done?", "permalink": "dev_complete"},
-    {"quote": "Do you pull out integration testing out into zero point cards?", "permalink": "zero_point_stories"},
-    {"quote": "Do you refuse to prioritise tech debt or bugs?", "permalink": "tech_debt"},
-    {"quote": "Do you refuse to do the right thing because it might initially impact your velocity?, "permalink": "do_the_right_thing"}
+    {
+      "quote": "Do you pressure testers on when testing will be done?",
+      "permalink": "is_testing_done"},
+    {
+      "quote": "Want to count the points after 'dev-complete' rather than done?",
+      "permalink": "dev_complete"},
+    {
+      "quote": "Do you pull out integration testing out into zero point cards?",
+      "permalink": "zero_point_stories"},
+    {
+      "quote": "Do you refuse to prioritise tech debt or bugs?",
+      "permalink": "tech_debt"},
+    {
+      "quote": "Do you refuse to do the right thing because it might initially impact your velocity?",
+      "permalink": "do_the_right_thing"}
   ]
 }

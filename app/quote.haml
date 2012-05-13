@@ -7,9 +7,8 @@
     .container{style: "display: none"}
       %div
         %img#raptor{src: "public/velocityraptor.jpg"}
-    :each quote in quotes
-      .container
-        .quote
-          =quote.quote
-        %a{href: quote.permalink} [permalink]
+    .container
+      .quote
+        =quote.quote
+      %a{href: quote.permalink} [permalink]
     = partial("footer.haml")

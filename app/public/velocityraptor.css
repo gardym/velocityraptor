@@ -35,3 +35,16 @@ body, p {
   display: inline-block;
   margin: 0 10px;
 }
+
+a:link, a:visited, a:active, a:hover {
+  color: #f00; 
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: #f66;
+}

@@ -27,3 +27,8 @@ var port = process.env.PORT || 3000;
 app.listen(port, function() {
     console.log("Listening on " + port);
 });
+
+//Google verification
+app.get('/google08bd29fca321dcae.html', function(request, response) {
+  response.render('google08bd29fca321dcae.haml');
+});

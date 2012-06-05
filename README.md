@@ -16,3 +16,6 @@
     cd velocityraptor/
     ./mocha.sh
 
+## To run localle
+
+    foreman start

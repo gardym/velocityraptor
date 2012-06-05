@@ -2,11 +2,9 @@ var express = require('express');
 var fs = require('fs');
 var app = express.createServer(express.logger());
 var Haml = require('haml');
-
 var quotes = JSON.parse(fs.readFileSync('app/quotes.json', 'utf-8')).quotes;
 
 app.use('/public', express.static(__dirname + '/public'));
-app.set('views', __dirname);
 app.set('view options', {layout: false});
 
 app.register('.haml', {

@@ -3,16 +3,24 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 var Haml = require('haml');
 var quotes = JSON.parse(fs.readFileSync('app/quotes.json', 'utf-8')).quotes;
+var env = require('./env.js');
 
 app.use('/public', express.static(__dirname + '/public'));
-app.set('view options', {layout: false});
+app.set('view options', {layout: true});
 
 app.register('.haml', {
-  compile: function(str, options){
-    return function(locals) { return Haml(str)(locals); };
-  }
+    compile: function(str, options){
+      return function(locals) { return Haml(str)(locals); };
+    }
 });
 
+app.dynamicHelpers({
+    production: function(req, res){
+      return env.is_production();
+    }
+});
+
+//Move to routes.js
 app.get('/', function(request, response) {
   response.render('index.haml', {quotes: quotes});
 });
@@ -31,12 +39,15 @@ app.get('/:permalink', function(request, response) {
   response.render('quote.haml', {quote: quote[0]});
 });
 
-var port = process.env.PORT || 3000;
-app.listen(port, function() {
-    console.log("Listening on " + port);
-});
 
 //Google verification
 app.get('/google08bd29fca321dcae.html', function(request, response) {
   response.render('google08bd29fca321dcae.haml');
+});
+
+
+//Start server
+var port = process.env.PORT || 3000;
+app.listen(port, function() {
+  console.log("Listening on " + port);
 });

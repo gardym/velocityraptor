@@ -1,14 +1,7 @@
-!!! 5
-%html
-  %head
-    %script{data-main: "public/main", src: "public/require-jquery.js"}
-    %link{type: "text/css", rel: "stylesheet", href: "public/velocityraptor.css"}
-  %body
-    .container{style: "display: none"}
-      %div
-        %img#raptor{src: "public/velocityraptor.jpg"}
-    .container
-      .quote
-        =quote.quote
-      %a{href: quote.permalink} [permalink]
-    = partial("footer.haml")
+.container{style: "display: none"}
+  %div
+    %img#raptor{src: "public/velocityraptor.jpg"}
+.container
+  .quote
+    =quote.quote
+  %a{href: quote.permalink} [permalink]

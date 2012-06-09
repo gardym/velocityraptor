@@ -1,0 +1,12 @@
+!!! 5
+%html
+  %head
+    %title velocityraptor.org | a public service announcement
+    %script{data-main: "public/main", src: "public/require-jquery.js"}
+    %link{type: "text/css", rel: "stylesheet", href: "public/velocityraptor.css"}
+  %body
+    != body
+    = partial("footer.haml")
+    - if (production) {
+    %script{src: "public/google-analytics.js", type: "text/javascript"}
+    - }

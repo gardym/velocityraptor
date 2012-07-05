@@ -10,14 +10,14 @@ define(["jquery"], function($) {
     var quoteClick = function() {
       $(this).off("click").closest(".container").hide()
 
-      var nextQuote = $(this).closest(".container").next().find(".quote");
+      var nextQuote = $(this).closest(".container").next().find(".yes");
       nextQuote.on("click", quoteClick);
 
       $("#raptor").on("click", function() { raptorClick(nextQuote); }).closest(".container").show();
     }; 
 
-    $(".quote").closest(".container").hide();
-    $(".quote:first").on("click", quoteClick).closest(".container").show();
+    $(".yes").closest(".container").hide();
+    $(".yes:first").on("click", quoteClick).closest(".container").show();
 
   };
 

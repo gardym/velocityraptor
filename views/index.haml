@@ -4,5 +4,6 @@
 :each quote in quotes
   .container
     .quote
+      %a{href: quote.permalink}
+        %img.icon{src: "public/noun_project_2339.svg"}
       =quote.quote
-    %a{href: quote.permalink} [permalink]

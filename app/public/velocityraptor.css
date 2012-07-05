@@ -11,7 +11,7 @@ body, p {
 
 .quote {
   font-family: "Georgia", sans-serif;
-  margin-top: 100px;
+  margin-top: 300px;
   font-size: 2em;
   color: #515151;
   letter-spacing: -0.05em;
@@ -27,6 +27,7 @@ body, p {
 }
 
 #footer ul {
+  clear:both;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -48,4 +49,9 @@ a:hover {
 
 a:active {
   color: #f66;
+}
+
+.icon {
+  height: 24px;
+  width: 24px;
 }

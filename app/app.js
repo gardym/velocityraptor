@@ -29,6 +29,10 @@ app.get('/about', function(request, response) {
   response.render('about.haml');
 });
 
+app.get('/halp', function(request, response) {
+  response.render('halp.haml');
+});
+
 app.get('/:permalink', function(request, response) {
   quote = quotes.filter(function(e, i, a) { return e.permalink == request.params.permalink });
 

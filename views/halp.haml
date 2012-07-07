@@ -1,0 +1,47 @@
+.container.copy
+  %h3 Velocity
+  %p Velocity is a measurement based on the completed work by a project team sampled at a regular interval. An iteration is a common interval used.
+  
+  %h3 Sampling
+  %p Let's say that the iteration length is 2 weeks. This gives you one measurement after the 1 iteration. two measurements after 2 iterations, etc.
+  %p With sampling you need a number of measurements (also known as data points) to be useful. It's is easy to take the average after 3 data points.
+  %p 19, 20, 21 -> the average is 20
+  %p 10, 20, 30 -> the average is 20
+  
+  %h3 Averages & Variance
+  %p The average is a useful metric and the one teams use. The second is variance. This tells you how wildly the numbers vary.
+  %p 19,20,21 -> the variance is 0.66
+  %p 10,20,30 -> the variance is 66.66 (we had one iteration on average, one where we scored low and one where we scored high)
+  
+  %h3 Stories & Estimates
+  %p Each story has a score associated with it. This might be in the form of small, medium or large or it might be an actual number like 1, 2, 3.
+  %p In either case the score associated with the story is achieved through an estimate. It's a guess. The idea is that the estimates indicate comparable size, not how long it will take to complete.
+  %p If we have 5 stories: 2x Small, 2x Medium and 1xLarge we know that small < medium < large.
+  %p If we have 5 stories: 1, 1, 2, 2, 3. We know that 1 < 2 < 3. We also know that 2 is twice as big as 1 and 3 is three times as big as a 1. 
+  %p If you want measure velocity, at some point your small, medium and large placeholders need to become numbers. 1, 2 and 4 may work here. It's a team thing.
+  
+  %h3 Measuring Velocity
+  %p When the interval is up; count the points for stories that are deemed to be done. We're using done to mean there is no more work to do on this story. It can be deployed.
+  %p This gives us a velocity measurement for the iteration. Simple.
+  
+  %h3 Estimates & Variance
+  %p The variance is useful for telling us if our estimates have high variance. If we estimate with the assumption that we are measuring relative size and we have low variance. Then we are likely to have been good at guessing relative sizes. If the variance is high then the team probably haven't done very well at relative sizing.
+  
+  %h3 Re-estimation
+  %p No, this will mean that your existing measurements are no longer compatible with the your new ones. High variance is only an issue if you don't know about it. Be aware that you have high variance. You still have an average. This just means that some iterations will score low and others will score high.
+  %p It's important to remember the estimate is not telling you how long the story will take. It's telling you how much work there is when compared to the other stories in the project.
+  %p Why do we want to know this? We'll it will tell us, when we are likely to finish all the work.
+  %p If we have 100 points in our backlog; and our velocity is 20 then it will take, based on our average, another 5 iterations to complete. 
+  
+  %h3 Commitments and Expectations
+  %p We now have a velocity, the average and the variance. Some teams like to commit to a velocity. "We're going to do 20 points this iteration". It's wrong to commit to a velocity. We've already seen that there will always be a natural variance within estimates and the size of the variance is based on how well we the measured relative sizing of stories. Therefore we know that some iterations will score lower than others. However, the average will yield correct over time.
+  %p This is about managing expectations to those who see velocity as a measure of performance. It's not, it's a measure of progress. Explain how it works and that there is variance. Not doing so will only create undue pressure on your team as you attempt to defeat statistics.
+  
+  %h3 Changing Averages
+  %p Our velocity only ever measures past performance. As such it's possible for an average to trend up or down as the project progress. This can be caused by stories in accidental clustering over under or over estimated cards. For the first five iterations the average was good; but after that is a cluster of stories you over estimated and consequently your average trends up. It's still an average and it's still correct. That's ok.
+  %p As you use the average to show when the project is likely to complete. If the average trends up or down then the when the project will finish will extend or shorten. This where the panic sets in; because it extends beyond someone's guess at when it should finish. The problem is that regardless of any estimate or variance, the project will take the same amount of time.
+  %p &nbsp;
+  %p &nbsp;
+  %p &nbsp;
+  %p &nbsp;
+  %p &nbsp;

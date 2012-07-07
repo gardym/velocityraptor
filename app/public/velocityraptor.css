@@ -1,7 +1,12 @@
 
 body, p {
+  margin: 0;
   font-family: "Tahoma", sans-serif;
   color: #000;
+}
+
+p {
+  margin-bottom: 0.6em;
 }
 
 .container {
@@ -18,10 +23,12 @@ body, p {
 }
 
 #footer {
+  border-top: 1px dotted black;
+  background-color: white;
   font-size: 0.80em;
   color: #999;
   position: fixed;
-  bottom: 10px;
+  bottom: 0px;
   text-align: center;
   width: 100%
 }
@@ -63,4 +70,16 @@ a:active {
 .response {
   padding-left: 0.2em;
   padding-right: 0.2em;
+}
+
+.copy {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+h3 {
+  margin-top: 1.6em;
+  margin-bottom: 0.3em;
 }
